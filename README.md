@@ -4,8 +4,14 @@ Adaption of whetstone baremetal benchmark to work with LEON3 microprocessor
 Modifications made by LIS, marked with ```//#LIS# Start LIS Modifcation``` and ```//#LIS# End LIS Modifcation```.
 Local variables have been replaced by global variables.
 
+# Compilation on linux system:
+
+	gcc -o whetstone whetstone.c -lm
+
+The ```-lm``` parameter is important to link the __math.h__ library!
+
 # Usage on linux bash
-	
+
 - Variant 1: ```whetstone 100000``` - 100000 is the number of loop iterations
 - Variant 2: ```whetstone -c 100000``` - this will run the benchmark continiously with 100000 loop iterations for each run
 	
